@@ -1,4 +1,4 @@
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {catchError, Observable, throwError} from 'rxjs';
 import {environment} from '../../../environments/environment';
@@ -11,8 +11,8 @@ export class BaseApiRequests {
   constructor(private http: HttpClient) {
   }
 
-  get<T>(url: string) {
-    return this.http.get<T>(`${this.baseUrl}/${url}`).pipe(catchError(this.formatErrors));
+  get<T>(url: string, params?: HttpParams){
+    return this.http.get<T>(`${this.baseUrl}/${url}`, {params}).pipe(catchError(this.formatErrors));
   }
 
   post<T>(url: string, body: T){

@@ -1,6 +1,6 @@
 import {Component, Inject, inject, Injectable} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {IdentityApiHandler} from '../../ApiHandlers/IdentityApiHandler/Identity.ApiHandler';
+import {IdentityApiHandler} from '../../ApiHandlers/Identity/Identity.ApiHandler';
 import {ErrorResponse} from '../../Responses/ErrorResponse';
 import {LoginResponse} from '../../DataTransferObjects/Login/LoginResponse';
 import {LoginRequest} from '../../DataTransferObjects/Login/LoginRequest';
@@ -33,7 +33,7 @@ export class LoginComponent {
     this.loginService.Login(this.loginDto).subscribe( {
       next: (response: SuccessResponse<LoginResponse>) =>{
         console.log(response)
-        localStorage.setItem("token", response.result.token);
+        localStorage.setItem("token", response.Result.Token);
       },
       error: (error: ErrorResponse) => {
         console.log(error);

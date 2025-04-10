@@ -4,7 +4,7 @@
           <mat-card>
             <div class="row">
               <div class="col-xs col-lg">
-                <mat-card-title>Spot</mat-card-title>
+                <mat-card-title (click)="navigateToCurrentTransactions()">Current transaction</mat-card-title>
               </div>
             </div>
           </mat-card>
@@ -13,7 +13,16 @@
           <mat-card>
             <div class="row">
               <div class="col-xs-12 col-lg">
-                <mat-card-title>Futures</mat-card-title>
+                <mat-card-title>Awaiting transactions</mat-card-title>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="col-xs mt-sm-2 col-lg-3 mt-lg-2">
+          <mat-card>
+            <div class="row">
+              <div class="col-xs-12 col-lg">
+                <mat-card-title (click)="navigateToArchivedTransactions()">Archived transactions</mat-card-title>
               </div>
             </div>
           </mat-card>
@@ -22,16 +31,7 @@
           <mat-card>
             <div class="row">
               <div class="col-xs col-lg">
-                <mat-card-title>Margin</mat-card-title>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-xs mt-sm-2 col-lg-3 mt-lg-2">
-          <mat-card>
-            <div class="row">
-              <div class="col-xs col-lg">
-                <mat-card-title>Financing</mat-card-title>
+                <mat-card-title (click)="navigateToCoinList()">Coin list</mat-card-title>
               </div>
             </div>
           </mat-card>

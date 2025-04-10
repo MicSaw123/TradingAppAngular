@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 
-export class AuthGuard {
+export class AuthGuardService {
 
   isLoggedIn(){
     return localStorage.getItem('token');

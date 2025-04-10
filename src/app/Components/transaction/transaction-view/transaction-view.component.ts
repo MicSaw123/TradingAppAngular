@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './transaction-view.component.css'
 })
 export class TransactionViewComponent {
-
 }

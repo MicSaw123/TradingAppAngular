@@ -13,9 +13,13 @@
           <th mat-header-cell *matHeaderCellDef>Price</th>
           <td mat-cell *matCellDef="let coinList">{{coinList.price}}</td>
         </ng-container>
-        <ng-container matColumnDef="Change">
-          <th mat-header-cell *matHeaderCellDef>Change</th>
-          <td mat-cell *matCellDef="let coinList"></td>
+        <ng-container matColumnDef="All-time high">
+          <th mat-header-cell *matHeaderCellDef>All-time high</th>
+          <td mat-cell *matCellDef="let coinList">{{coinList.allTimeHighPrice}}</td>
+        </ng-container>
+        <ng-container matColumnDef="All-time low">
+          <th mat-header-cell *matHeaderCellDef>All-time low</th>
+          <td mat-cell *matCellDef="let coinList">{{coinList.allTimeLowPrice}}</td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

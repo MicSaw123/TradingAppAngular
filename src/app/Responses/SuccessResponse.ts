@@ -13,11 +13,11 @@ export class SuccessResponseBase {
 }
 
 export class SuccessResponse<T> extends SuccessResponseBase{
-  result: T;
+  Result: T;
 
   constructor(result: T) {
     super();
-    this.result = result;
+    this.Result = result;
   }
 
   static CreateResponse<T>(result: T): SuccessResponse<T> {
